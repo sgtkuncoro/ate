@@ -9,7 +9,12 @@ export class User extends BaseEntity {
     @Column()
     uuid: string;
 
-    @Column("text")
+    @Column({
+        type: "varchar",
+        length: 150,
+        unique: true
+    })
+    
     email: string;
 
     @Column()
